@@ -7,15 +7,25 @@
         \/                        \/     \/           \/          \/ /_____/      \/          \/        \//_____/ 
 ```
 
-#### instsall
+#### intro
+
+**Rails like lightly API service. **
+
+Use simple command to generate API services.
+
+#### usegae
+
+1. Install
 
 ```bash
 npm install northern-lightning
-```         
+```  
 
-#### directory
+2. Default Project
 
-```
+Project will auto created after install. Dir functions depend on Rails.
+
+```bash
 |-- config
 |---- router.js
 |-- models
@@ -29,29 +39,63 @@ npm install northern-lightning
 |-- data.db
 ```
 
-#### useage
+3. Scaffold Action
 
-##### generate controller and model.
+Run this command in terminal to generate user.controller.js and user.model.js
 
-```shell
-$ N generate <action> [modelColumns]
+```bash
+N generate user username sex age 
+```
+
+4. Register Route
+
+Add this lines to `config/router.js`
+
+```javascript
+const UserController = require('../controllers/user.controller.js')
+
+// ...
+L.router('user', UserController)
+```
+
+5. API Service
+
+Run this commnad to start a web server.
+```bash
+N server
+```
+You will got a basic backend API service by registered routes. 
+Open this link in your browser.
+```
+localhost:3000/users
+```
+
+6. Make your develop
+
+You can construct front pages in public, and stay static resources in assets.
+
+
+#### Other
+
+#### command
+
+generate controller and model.
+
+```bash
+$ N generate <action> [model-property]
 ```
 or
-```shell
-$ N g <action> [modelColumns]
-```
-example:
-```
-N g user username sex age 
+```bash
+$ N g <action> [model-property]
 ```
 
-##### start server
+start server
 
-```shell
+```bash
 $ N server
 ```
 or
-```shell
+```bash
 $ N s
 ```
 
@@ -64,3 +108,5 @@ $ N s
 | /action/:id | GET | ActionController.get | get data by specific id
 | /action/:id | PUT | ActionController.update | update data by specific id
 | /action/:id | DELETE | ActionController.remove | delete data by specific id
+
+**More features will be applied soon**

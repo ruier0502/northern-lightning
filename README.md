@@ -7,21 +7,21 @@
         \/                        \/     \/           \/          \/ /_____/      \/          \/        \//_____/ 
 ```
 
-#### intro
+#### Intro
 
-**Rails like lightly API service. **
+** Rails like lightly API service. **
 
 Use simple command to generate API services.
 
-#### usegae
+#### Useage
 
-1. Install
+##### 1.Install
 
 ```bash
 npm install northern-lightning
 ```  
 
-2. Default Project
+##### 2.Default Project
 
 Project will auto created after install. Dir functions depend on Rails.
 
@@ -39,7 +39,7 @@ Project will auto created after install. Dir functions depend on Rails.
 |-- data.db
 ```
 
-3. Scaffold Action
+##### 3.Scaffold Action
 
 Run this command in terminal to generate user.controller.js and user.model.js
 
@@ -47,7 +47,7 @@ Run this command in terminal to generate user.controller.js and user.model.js
 N generate user username sex age 
 ```
 
-4. Register Route
+##### 4.Register Route
 
 Add this lines to `config/router.js`
 
@@ -58,7 +58,7 @@ const UserController = require('../controllers/user.controller.js')
 L.router('user', UserController)
 ```
 
-5. API Service
+##### 5.API Service
 
 Run this commnad to start a web server.
 ```bash
@@ -70,7 +70,7 @@ Open this link in your browser.
 localhost:3000/users
 ```
 
-6. Make your develop
+##### 6.Make your develop
 
 You can construct front pages in public, and stay static resources in assets.
 
@@ -82,11 +82,11 @@ You can construct front pages in public, and stay static resources in assets.
 generate controller and model.
 
 ```bash
-$ N generate <action> [model-property]
+$ N generate <action> [model-properties]
 ```
 or
 ```bash
-$ N g <action> [model-property]
+$ N g <action> [model-properties]
 ```
 
 start server

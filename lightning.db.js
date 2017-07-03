@@ -7,7 +7,7 @@ bluebird.promisifyAll(Datastore.prototype);
 bluebird.promisifyAll(Cursor.prototype);
 
 let DAO = module.exports = exports = {
-  all: async(model)=>{
+  all: async (model)=>{
     return db.findAsync({ _model: model })
   },
   find: async (id)=>{
